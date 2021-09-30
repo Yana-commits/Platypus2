@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecf76bc7632d3d45ab429143324e96d, type: 3}
+  m_Name: Tile Repository
+  m_EditorClassIdentifier: 
+  tileList:
+  - tilePrefab: {fileID: 867225479819309277, guid: 12664153464f41243afe78af15bfba9d,
+      type: 3}
+  - tilePrefab: {fileID: 2874756037370249389, guid: c19584ac933a11c4da22c7c2e654dcbe,
+      type: 3}
+  - tilePrefab: {fileID: 4301683517574123102, guid: 38c312d6480a2bc47bcd55fb5ad233ec,
+      type: 3}
+  coinSettings:
+    prefab: {fileID: 2035167019880580922, guid: 465f3e283a17a6b4f992fe837e7bdf47,
+      type: 3}
+    nomber: 10
+    cost: 1
+  enemySettings:
+    prefab: {fileID: -9149936083888971829, guid: 7be7222cc436e644d8d528001536e203,
+      type: 3}
+    nomber: 5
+    cost: 5
