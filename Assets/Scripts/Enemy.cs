@@ -10,12 +10,16 @@ public class Enemy : Items, ITouchable
 
     void Start()
     {
-        controller.OnEnemy += ToDie;
+        controller.OnHitEnemy += ToDie;
+        controller.OnSubEnemy += ToHide;
     }
     private void ToDie()
     {
-       
         animator.SetTrigger("Die");
+    }
+    private void ToHide()
+    {
+        Destroy(gameObject);
     }
     public void Touch()
     {
@@ -24,6 +28,7 @@ public class Enemy : Items, ITouchable
 
     void OnDestroy()
     {
-        controller.OnEnemy -= ToDie;
+        controller.OnHitEnemy -= ToDie;
+        controller.OnSubEnemy -= ToHide;
     }
 }

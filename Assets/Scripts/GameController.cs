@@ -15,7 +15,8 @@ public class GameController : MonoBehaviour
 
     private int score = 0;
 
-    public Action OnEnemy;
+    public Action OnHitEnemy;
+    public Action OnSubEnemy;
     void Awake()
     {
         player.Init(settings);
@@ -40,6 +41,7 @@ public class GameController : MonoBehaviour
     }
     public void SubtractCoins(int cost)
     {
+        OnSubEnemy?.Invoke();
         score -= cost;
         player.Init(settings);
         player.animator.SetTrigger("Go");
@@ -53,7 +55,7 @@ public class GameController : MonoBehaviour
     private IEnumerator HitAct()
     {
         yield return new WaitForSeconds(2.5f);
-        OnEnemy?.Invoke();
+        OnHitEnemy?.Invoke();
         player.Init(settings);
     }
    
