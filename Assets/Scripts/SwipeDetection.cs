@@ -58,7 +58,7 @@ public class SwipeDetection : MonoBehaviour
             if (!isMobile && Input.GetMouseButton(0))
             {
                 swipeDelta = (Vector2)Input.mousePosition - tapPosition;
-                //tapPosition = Input.mousePosition;
+                tapPosition = Input.mousePosition;
             }  
             else if (Input.touchCount > 0)
                 swipeDelta = Input.GetTouch(0).position - tapPosition;
